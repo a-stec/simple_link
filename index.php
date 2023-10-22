@@ -20,17 +20,19 @@
 
       <main class="main">
         <div class="short">
-          <div class="container short__container flex">
-            <div class="short__alert">
-              <strong>Запрос успешно выполнен</strong>
-            </div>
-            <form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="form flex short__form">
-              <input type="text" name="url" class="input form__input" placeholder="Введите URL-адрес">
-              <button type="submit" class="btn btn-reset form__btn">Сократить</button>
-            </form>
-            <div class="short__print flex">
-              <input type="text" name="short" class="input short__input" readonly>
-              <button class="btn btn-reset short__btn">Копировать</button>
+          <div class="container">
+            <div class="short__wrapper flex">
+              <div class="short__alert alert alert_success">
+                <strong class="alert__text">Запрос успешно выполнен</strong>
+              </div>
+              <form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="form flex short__form">
+                <input type="text" name="url" class="input form__input" placeholder="Введите URL-адрес">
+                <button type="submit" class="btn btn-reset form__btn short__btn short__btn_effects">Сократить</button>
+              </form>
+              <div class="short__print flex">
+                <input type="text" name="short" class="input short__input" readonly>
+                <button class="btn btn-reset short__btn short__btn_effects">Копировать</button>
+              </div>
             </div>
           </div>
         </section>

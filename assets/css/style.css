@@ -9,12 +9,24 @@ html {
 }
 
 body {
-  min-width: 1200px;
+  /* min-width: 1200px; */
   font-family: sans-serif;
   font-weight: 400;
+  font-size: 16px;
 }
 
 /* glob */
+:root {
+  --color_main: #FBCEB1;
+  --color_accent: #e43737b6;
+  --color_focus: #e79b11;
+  --color_hover: #c4464699;
+  --color_active: #c71c1ce8;
+  --color_success: green;
+  --color_error: red;
+}
+
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -29,16 +41,16 @@ body {
   display: flex;
 }
 
-.btn {
-  padding: 10px 15px;
-  border-radius: 3px;
-}
-
 .btn-reset {
   border: none;
   padding: 0;
   background-color: transparent;
   cursor: pointer;
+}
+
+.btn {
+  padding: 10px 15px;
+  border-radius: 3px;
 }
 
 .input {
@@ -49,18 +61,20 @@ body {
 
 /* body */
 .body {
+  position: relative;
+  min-width: 320px;
+  height: 100vh;
   background-color: #FAF7FD;
 }
 
 .body__wrapper {
-  margin-top: 15%;
-  margin-bottom: 50px;
+  position: relative;
+  top: 25%;
 }
 
 /* header */
 .header {
   margin-bottom: 30px;
-  padding-top: 40px;
   text-align: center;
   /* outline: 2px solid coral; */
 }
@@ -88,16 +102,14 @@ body {
 /* main */
 
 /* short */
-.short__container {
+.short__wrapper {
   flex-direction: column;
   padding: 20px;
-  background-color: #FBCEB1;
-  outline: 2px solid blue;
+  background-color: var(--color_main);
 }
 
 .short__alert {
   align-self: flex-end;
-  margin-bottom: 20px;
 }
 
 .short__print {
@@ -105,9 +117,64 @@ body {
   align-items: center;
 }
 
+.short__btn {
+  color: white;
+  background-color: var(--color_accent);
+}
+
+.short__btn_effects {
+  position: relative;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.short__btn_effects::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  outline: 2px solid var(--color_focus);
+  outline-offset: 3px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.short__btn_effects:focus::before {
+  opacity: 1;
+}
+
+/* .short__btn_effects:hover {
+  background-color: var(--color_hover);
+}
+
+.short__btn_effects:active {
+  background-color: var(--color_active);
+} */
+
+
+
 /* form */
 .form {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+}
+
+/* alert */
+.alert {
+  font-size: initial;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  max-width: 260px;
+  color: white;
+}
+
+.alert_success {
+  background-color: var(--color_success);
+}
+
+.alert_error {
+  background-color: var(--color_error);
 }
