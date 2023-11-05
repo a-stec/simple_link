@@ -26,11 +26,11 @@
                 <strong class="alert__text">Запрос успешно выполнен</strong>
               </div>
               <form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="form flex short__form">
-                <input type="text" name="url" class="input form__input" placeholder="Введите URL-адрес">
+                <input type="text" name="url" class="input form__input short__input short__input_effects" placeholder="Введите URL-адрес">
                 <button type="submit" class="btn btn-reset form__btn short__btn short__btn_effects">Сократить</button>
               </form>
               <div class="short__print flex">
-                <input type="text" name="short" class="input short__input" readonly>
+                <input type="text" name="short" class="input short__input short__input_effects" readonly>
                 <button class="btn btn-reset short__btn short__btn_effects">Копировать</button>
               </div>
             </div>
