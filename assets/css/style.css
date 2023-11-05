@@ -56,6 +56,8 @@ body {
 .input {
   margin-right: 10px;
   padding: 0.6em;
+  border: 2px solid #b2b4b6;
+  border-radius: 6px;
   width: 100%;
 }
 
@@ -140,19 +142,42 @@ body {
   transition: opacity 0.3s ease-in-out;
 }
 
-.short__btn_effects:focus::before {
+.short__btn_effects:focus-visible {
+  outline: none;
+}
+
+.short__btn_effects:focus-visible::before {
   opacity: 1;
 }
 
-/* .short__btn_effects:hover {
+.short__btn_effects:hover:not(:focus-visible) {
   background-color: var(--color_hover);
 }
 
-.short__btn_effects:active {
+.short__btn_effects:active:not(:focus-visible) {
   background-color: var(--color_active);
-} */
+}
 
+.short__input_effects {
+  /* transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out; */
+  transition-property: border-color, background-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
 
+.short__input_effects:focus-visible {
+  outline: none;
+  border-color: var(--color_focus);
+  background-color: #ebebe8;
+}
+
+.short__input_effects:hover:not(:focus-visible) {
+  border-color: var(--color_focus);
+}
+
+.short__input_effects:active:not(:focus-visible) {
+  border-color: var(--color_focus);
+}
 
 /* form */
 .form {
