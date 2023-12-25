@@ -9,5 +9,5 @@ $host = 'localhost';
 $login = 'root';
 $passwd = '';
 $db = 'simple_links';
-
+// Подключение к БД
 $dbConn = mysqli_connect($host, $login, $passwd) or die("<h1>"."Ошибка подключения к БД: \n" . mysqli_connect_error()."</h1>");

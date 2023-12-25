@@ -1,4 +1,5 @@
 <?php
+// Функция генерации токена
 function genToken($len=5) {
   $chars = str_split('abcdefghijklmnopqrstuvwxyzABCDFEGHIJKLMNOPRSTUVWXYZ0123456789');
   $token = '';

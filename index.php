@@ -33,15 +33,15 @@
         <div class="short">
           <div class="container">
             <div class="short__wrapper flex">
-              <div class="short__alert alert alert_success">
-                <strong class="alert__text">Запрос успешно выполнен</strong>
+              <div id="alert" class="short__alert alert alert_success">
+                <strong id="message" class="alert__text">Запрос успешно выполнен</strong>
               </div>
               <form action="" method="POST" id="form" class="form flex short__form">
                 <input type="url" name="url" class="input form__input short__input short__input_effects" placeholder="Введите URL-адрес">
                 <button type="button" class="btn btn-reset form__btn short__btn short__btn_effects" onclick="getShortLink()">Сократить</button>
               </form>
               <div class="short__print flex">
-                <input type="url" name="short" class="input short__input short__input_effects" readonly>
+                <input id="copy" type="url" name="short" class="input short__input short__input_effects" readonly>
                 <button class="btn btn-reset short__btn short__btn_effects">Копировать</button>
               </div>
             </div>
