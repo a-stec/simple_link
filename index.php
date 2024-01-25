@@ -40,7 +40,7 @@
                 <input type="url" name="url" class="input form__input short__input short__input_effects" placeholder="Введите URL-адрес">
                 <button type="button" class="btn btn-reset form__btn short__btn short__btn_effects" onclick="getShortLink()">Сократить</button>
               </form>
-              <div class="short__print flex">
+              <div id="print" class="short__print flex">
                 <input id="copy" type="url" name="short" class="input short__input short__input_effects" readonly>
                 <button class="btn btn-reset short__btn short__btn_effects">Копировать</button>
               </div>

@@ -1,5 +1,11 @@
 window.onload = function () {
   console.log("Страница загружена");
+  window.alert = $("#alert").clone();
+  window.print = $('#print').clone();
+  console.log(window.alert);
+  console.log(window.print);
+  $("#alert").remove();
+  $("#print").remove();
 }
 
 function getShortLink() {
@@ -20,7 +26,7 @@ function getShortLink() {
         // Парсим обратно в массив
         var arResult = jQuery.parseJSON(result);
         // Получаем наш алерт и инпут для копирования сокращенной ссылки...
-        var copy = $("#copy");
+        $('.short__wrapper').prepend(window.alert);
         var alert = $("#alert");
         var message = $("#message");
         // Выводим сообщение на экран
@@ -29,10 +35,14 @@ function getShortLink() {
           message.html(arResult["error"]);
           alert.addClass("alert_error");
         } else if ("success" in arResult) {
+          $('.short__wrapper').append(window.print);
+          var copy = $("#copy");
           message.html(arResult["success"]);
           alert.addClass("alert_success");
           copy.val(arResult["short"]);
         }
+        // this.alert.removeClass("hidden");
+        // this.print.removeClass("hidden");
       }
     },
     error: function(xhr, str) {
