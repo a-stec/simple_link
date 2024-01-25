@@ -33,12 +33,12 @@ body {
   padding: 0 15px;
 }
 
-.hidden {
-  display: none;
-}
-
 .flex {
   display: flex;
+}
+
+.hidden {
+  display: none;
 }
 
 .btn-reset {
@@ -107,7 +107,12 @@ body {
 .short__wrapper {
   flex-direction: column;
   padding: 20px;
+  border-radius: 10px;
   background-color: var(--color_main);
+}
+
+.short__wrapper > *:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .short__alert {
@@ -183,13 +188,13 @@ body {
 .form {
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 /* alert */
 .alert {
   font-size: initial;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   padding: 10px 20px;
   border-radius: 10px;
   max-width: 260px;
