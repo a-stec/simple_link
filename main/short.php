@@ -1,7 +1,7 @@
 <?php
-require_once($_SERVER["DOCUMENT_ROOT"] . "/project/simple_link/init/connect.php");
-require_once($_SERVER["DOCUMENT_ROOT"] . "/project/simple_link/functions/genToken.php");
-require_once($_SERVER["DOCUMENT_ROOT"] . "/project/simple_link/functions/validate.php");
+require_once($_SERVER["DOCUMENT_ROOT"] . "/init/connect.php");
+require_once($_SERVER["DOCUMENT_ROOT"] . "/functions/genToken.php");
+require_once($_SERVER["DOCUMENT_ROOT"] . "/functions/validate.php");
 
 $db = 'simple_links';
 $tableDB = "short_link";
@@ -22,7 +22,7 @@ if (isset($_POST["url"]) && $db_selected) {
   // Если все соответствует нужным значениям...
   else {
     $selectDB = mysqli_query($dbConn, "SELECT * FROM `".$tableDB."` WHERE `url` = '".$url."'");
-    $arRequest["short"] = "http://" . $_SERVER["HTTP_HOST"] . "/project/simple_link/";
+    $arRequest["short"] = "http://" . $_SERVER["HTTP_HOST"] . "/";
     // Если запись существует...
     if (mysqli_num_rows($selectDB)) {
       $row = mysqli_fetch_assoc($selectDB);

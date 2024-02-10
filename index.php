@@ -42,7 +42,7 @@
               </form>
               <div id="print" class="short__print flex">
                 <input id="copy" type="url" name="short" class="input short__input short__input_effects" readonly>
-                <button class="btn btn-reset short__btn short__btn_effects">Копировать</button>
+                <button class="btn btn-reset short__btn short__btn_effects" onclick="copyLink('#copy')">Копировать</button>
               </div>
             </div>
           </div>
