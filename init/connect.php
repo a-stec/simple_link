@@ -1,5 +1,5 @@
 <?php
-$dir = $_SERVER['DOCUMENT_ROOT'] . '/project/simple_link/logs';
+$dir = $_SERVER['DOCUMENT_ROOT'] . '/logs';
 if (!is_dir($dir)) {
   mkdir($dir, 0777, true);
 }

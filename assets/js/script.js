@@ -50,3 +50,10 @@ function getShortLink() {
     }
   });
 }
+
+function copyLink(field) {
+  // Выделяем текст внутри поля
+  $(field).select();
+  // Выполняем команду копирования
+  document.execCommand("copy");
+}
