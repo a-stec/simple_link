@@ -22,7 +22,7 @@ if (isset($_POST["url"]) && $db_selected) {
   // Если все соответствует нужным значениям...
   else {
     $selectDB = mysqli_query($dbConn, "SELECT * FROM `".$tableDB."` WHERE `url` = '".$url."'");
-    $arRequest["short"] = "http://" . $_SERVER["HTTP_HOST"] . "/";
+    $arRequest["short"] = "http://" . $_SERVER["HTTP_HOST"] . "/project/simple_link/";
     // Если запись существует...
     if (mysqli_num_rows($selectDB)) {
       $row = mysqli_fetch_assoc($selectDB);
