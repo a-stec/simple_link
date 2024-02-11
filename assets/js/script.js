@@ -56,4 +56,6 @@ function copyLink(field) {
   $(field).select();
   // Выполняем команду копирования
   document.execCommand("copy");
+  // Отменение всех выделений
+  document.getSelection().removeAllRanges();
 }
