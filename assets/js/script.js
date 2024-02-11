@@ -62,7 +62,7 @@ function copyLink(field) {
   // Установка сообщения в алерт
   var alert = $("#alert");
   var message = $("#message");
-  alert.classList.remove("alert_error");
-  alert.classList.add("alert_success");
-  message.innerHTML = "Ссылка скопирована";
+  alert.removeClass("alert_error");
+  alert.addClass("alert_success");
+  message.html("Ссылка скопирована");
 }
