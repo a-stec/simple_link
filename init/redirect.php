@@ -13,5 +13,9 @@ if (!empty($_GET["key"])) {
     $row = mysqli_fetch_assoc($select);
     header('HTTP/1.1 301 Moved Permanently');
     header('Location: ' . $row["url"]);
+    die("Redirect");
+  }
+  else {
+    header('Location: /404.php');
   }
 }

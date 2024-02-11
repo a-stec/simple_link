@@ -4,6 +4,9 @@ DirectoryIndex index.php
 # Управление доступом к структуре проекта
 Options -Indexes
 
+# Переход на 404
+ErrorDocument 404 /404.php
+
 # Управление доступом к элементам проекта для ip-адресов
 <Files home.php>
 Order Allow,Deny
