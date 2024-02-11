@@ -10,6 +10,6 @@ require_once('connect.php');
   <title>Document</title>
 </head>
 <body>
-  <h1><?echo $_GET["key"]?></h1>
+  <h1><?php echo $_GET["key"];?></h1>
 </body>
 </html>
