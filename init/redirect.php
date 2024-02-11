@@ -1,15 +1,12 @@
 <?php
 require_once('connect.php');
-?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1><?php echo $_GET["key"];?></h1>
-</body>
-</html>
+if (!empty($_GET["key"])) {
+  $key = mysqli_real_escape_string($dbConn, trim($_GET["key"]));
+  $select = mysqli_query($dbConn, "SELECT * FROM `short_link` WHERE `token` = '".$key."'");
+  if (mysqli_num_rows($select)) {
+    $row = mysqli_fetch_assoc($select);
+    header('HTTP/1.1 301 Moved Permanently');
+    header('Location: ' . $row["url"]);
+  }
+}
