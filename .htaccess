@@ -4,6 +4,8 @@ DirectoryIndex index.php
 # Управление доступом к структуре проекта
 Options -Indexes
 
+php_flag register_globals off
+
 # Переход на 404
 ErrorDocument 404 /404.php
 
