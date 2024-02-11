@@ -58,4 +58,11 @@ function copyLink(field) {
   document.execCommand("copy");
   // Отменение всех выделений
   document.getSelection().removeAllRanges();
+
+  // Установка сообщения в алерт
+  var alert = $("#alert");
+  var message = $("#message");
+  alert.classList.remove("alert_error");
+  alert.classList.add("alert_success");
+  message.innerHTML = "Ссылка скопирована";
 }
