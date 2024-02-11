@@ -1,3 +1,7 @@
+<?php
+require_once('connect.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +10,6 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>Поздравляю, вы ввполнили редирект!</h1>
+  <h1><?echo $_GET["key"]?></h1>
 </body>
 </html>
